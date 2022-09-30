@@ -1,0 +1,701 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Big Ten Academic Alliance Geospatial Information Network">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
+    
+    
+      
+        <title>Find & Use GIS Web Services with the BTAA Geoportal - GeoBTAA Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#find-use-gis-web-services-with-the-btaa-geoportal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GeoBTAA Tutorials" class="md-header__button md-logo" aria-label="GeoBTAA Tutorials" data-md-component="logo">
+      
+  <img src="../images/btaa-logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GeoBTAA Tutorials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Find & Use GIS Web Services with the BTAA Geoportal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GeoBTAA Tutorials" class="md-nav__button md-logo" aria-label="GeoBTAA Tutorials" data-md-component="logo">
+      
+  <img src="../images/btaa-logo-white.png" alt="logo">
+
+    </a>
+    GeoBTAA Tutorials
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Find & Use GIS Web Services with the BTAA Geoportal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Find & Use GIS Web Services with the BTAA Geoportal
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#note-for-instructors" class="md-nav__link">
+    Note for Instructors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-web-services" class="md-nav__link">
+    Intro to Web Services
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro to Web Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-type" class="md-nav__link">
+    Data Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-web-services" class="md-nav__link">
+    Why Use Web Services?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-drawbacks" class="md-nav__link">
+    Some Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locating-services" class="md-nav__link">
+    Locating Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-web-services" class="md-nav__link">
+    Loading Web Services
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading Web Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgis" class="md-nav__link">
+    QGIS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgis-pro" class="md-nav__link">
+    ArcGIS Pro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgis-online" class="md-nav__link">
+    ArcGIS Online
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgis-desktop" class="md-nav__link">
+    ArcGIS Desktop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#note-for-instructors" class="md-nav__link">
+    Note for Instructors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-web-services" class="md-nav__link">
+    Intro to Web Services
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro to Web Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-type" class="md-nav__link">
+    Data Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-web-services" class="md-nav__link">
+    Why Use Web Services?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-drawbacks" class="md-nav__link">
+    Some Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locating-services" class="md-nav__link">
+    Locating Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-web-services" class="md-nav__link">
+    Loading Web Services
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading Web Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgis" class="md-nav__link">
+    QGIS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgis-pro" class="md-nav__link">
+    ArcGIS Pro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgis-online" class="md-nav__link">
+    ArcGIS Online
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcgis-desktop" class="md-nav__link">
+    ArcGIS Desktop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="find-use-gis-web-services-with-the-btaa-geoportal">Find &amp; Use GIS Web Services with the BTAA Geoportal</h1>
+<p>This tutorial is part of an educational series produced by members of the Big Ten Academic Alliance Geoportal.</p>
+<p>Prepared by: Jay Bowen, GIS Specialist, University of Iowa (jay-bowen@uiowa.edu). </p>
+<p>These slides and the accompanying activities are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a> license.</p>
+<h3 id="note-for-instructors">Note for Instructors</h3>
+<p>This tutorial is intended for GIS users with an established cursory understanding of how to use GIS software for visualizing spatial data and making maps, regardless of whether they are graduate, undergraduate, or faculty/staff users. These users may have encountered web services for GIS in formats like WMS, WMTS, or WFS, but are unsure of how to use them. This tutorial is meant to introduce users to these formats, demonstrate how to find them in the BTAA Geoportal, and show how to use them in QGIS, ArcGIS Desktop, ArcGIS Online, and ArcGIS Pro. For an extra challenge involving the use of ArcGIS Feature Services to create a web map with Leaflet, please follow the link to my tutorial on GitHub.</p>
+<p>These slides walk through the steps of loading an ArcGIS Feature Service in several of the most commonly used GIS platforms. Please use the links provided on the Loading Web Services: Menu page to jump to the appropriate slides for your preferred software.</p>
+<p>The tutorial was designed for in-person, hybrid, and online instructional contexts. The self-guided review activity can be assigned to be completed after class, or as a live activity where students can pose questions to the instructor and other students, in person or through a chat window, as they work through it.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>Through completing this tutorial, students will:
+Learn the basics of GIS web services - What are they? What kind of data do they host? What are the benefits and drawbacks?
+Locate and load an ArcGIS Feature Service with the BTAA Geoportal and their preferred GIS software.
+Find and load their own web service through the BTAA Geoportal and consider the utility of their data to different kinds of users.</p>
+<h2 id="intro-to-web-services">Intro to Web Services</h2>
+<p>Several types of web services available to GIS users that serve geospatial data in different formats from web servers. As documented in the tutorial, Types of Geospatial Information by Nicole Kong, geospatial data for web services fall into four categories: vector, raster, tabular, and scanned maps. For this exercise, we will focus on the categories below:</p>
+<h3 id="data-type">Data Type</h3>
+<p>What is it?</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>What is it?</th>
+<th>Relevant Web Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vector</td>
+<td>Discrete points, lines, or polygons</td>
+<td>WFS/ArcGIS Feature Service</td>
+</tr>
+<tr>
+<td>Raster</td>
+<td>Continuous pixelated data with each pixel assigned a value</td>
+<td>WMS/ArcGIS Map Service</td>
+</tr>
+<tr>
+<td>Scanned Map</td>
+<td>A scanned sheet map in image format</td>
+<td>WMTS/ArcGIS Tiled Map Service</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-use-web-services">Why Use Web Services?</h3>
+<p>Web Map Tile Service (WMTS): Access to scanned maps that are already georeferenced. Saves a lot of time considering how painstakingly slow georeferencing can be! </p>
+<p>Web Feature Service (WFS): Direct access to vector data curated by the organization hosting the data. You will not need to join tabular data from one source to shapefiles from another source, and you will often have a direct connection to consistently updated data.</p>
+<p>Web Map Service (WMS): Renders geospatial data as map images. Similar benefits to WFS.</p>
+<p>Overall: Effective use of all these services will likely save you a lot of time downloading, cleaning, processing, and managing your data. </p>
+<p>Question: Can you think of any drawbacks or reasons why it might be preferable to download, process, and manage your own data?</p>
+<p>For additional information about these services, navigate to the BTAA Web Services page. </p>
+<h3 id="some-drawbacks">Some Drawbacks</h3>
+<p>Web Map Tile Service (WMTS): The georeferencing is not always great. You may find yourself redoing it anyway.</p>
+<p>Web Feature Service (WFS): Updates to the tables are dependent upon the host. What happens if the server goes down or the data cease to be updated? For regularly updated data, it can be difficult to determine all possible values for classification purposes, if only a portion are used frequently, and the metadata are not very detailed.</p>
+<p>Web Map Service (WMS): Can be quite limiting if derived from data that were originally in vector format – loss of associated tabular data.</p>
+<h2 id="locating-services">Locating Services</h2>
+<p>For a more thorough exploration of using the BTAA Geoportal, please see the tutorial entitled Finding Geospatial Data by Joshua Sadvari. For the purposes of this exercise, let’s map leaking underground storage tanks in Iowa.
+Navigate to the BTAA Geoportal. Search for “Iowa leaking tanks.”
+In the results, under “Limit your search,” scroll down to “Resource Class” and click “Web Services.” This will limit your results to web services (not needed here, but it will help if you have many search results).
+Click the result entitled “Leaking Underground Storage Tanks: Iowa,” hosted by the Iowa DNR.
+In the upper right corner, under “Links,” click “Web Services.” Now you have access to a web service URL!</p>
+<h2 id="loading-web-services">Loading Web Services</h2>
+<p>There are slightly different steps for loading web services depending upon which GIS platform you are using. Click the following links to take you to the appropriate slides for your GIS software.</p>
+<p>QGIS
+ArcGIS Pro
+ArcGIS Online
+ArcGIS Desktop
+Web Mapping with Leaflet (Uses a different dataset)</p>
+<h3 id="qgis">QGIS</h3>
+<ol>
+<li>Now that you have access to a web service, you will want to know how to use it in your preferred GIS software. For this exercise, we will use QGIS.</li>
+<li>Open QGIS and go to the Layer drop down menu. Click Add Layer &gt; Add ArcGIS FeatureServer Layer.</li>
+<li>In these options, you will also notice options for other types of web services. You can experiment with adding these later.</li>
+<li>In the window that opens, click “New” to establish a new connection between QGIS and the web service.</li>
+<li>Give your connection a meaningful name, like “Iowa Environment Data”</li>
+<li>Paste the URL obtained from the geoportal into the empty box next to “URL” and click “OK.”</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>WARNING: Make sure that you cut off everything in the address after “MapServer,” ex: https://programs.iowadnr.gov/geospatial/rest/services/OneStop/QueryEnvFacs/MapServer
+The Server Connection window will appear. Highlight “Leaking Underground Storage Tanks” and click “Add” at the bottom of the window.
+“Leaking Underground Storage Tanks” will appear in your Table of Contents. If you have not added a base map, do so now.</p>
+</div>
+<p>As you can see, the map window is crowded with many symbols, but you now have data from a web service in your map window!</p>
+<p>Look at the attribute table and play around with editing the symbology based on one of the fields. There is a lot of interesting info!</p>
+<h3 id="arcgis-pro">ArcGIS Pro</h3>
+<p>Now that you have access to a web service, you will want to know how to use it in your preferred GIS software. For this exercise, we will use ArcGIS Pro.
+Open ArcGIS Pro, go to the Insert tab, and click “Connections.”
+In these options, you will also notice options for other types of web services. You can experiment with adding these later.
+Click “New ArcGIS Server.”</p>
+<p>Paste the URL obtained from the geoportal into the empty box next to Server URL and click “OK.”</p>
+<p>In the Catalog window, open “Project,” expand “Servers,” and expand the service you just connected.</p>
+<p>Notice that you are connected to all the services the Iowa DNR offers.</p>
+<p>Expand “OneStop” and “QueryEnvFacs.”</p>
+<p>Use “Leaking Underground Storage Tanks” and select “Add To Current Map.”</p>
+<p>You may need to zoom into your map in order to see the data, as it is scale-dependent upon loading in Pro. You will also notice that the map window is crowded with many symbols, but you now have data from a web service in your map window!</p>
+<p>Look at the attribute table and play around with editing the symbology based on one of the fields. There is a lot of interesting info!</p>
+<h3 id="arcgis-online">ArcGIS Online</h3>
+<p>Now that you have access to a web service, you will want to know how to use it in your preferred GIS software. For this exercise, we will use ArcGIS Online.
+Make sure to select “An ArcGIS Server Web Service” for this data. You will also notice options for other types of web services. You can experiment with adding these later.
+Open ArcGIS Online, go to the Add tab, and click “Add Layer from Web.”
+Copy and paste the web service URL in the empty box next to “URL” and click “Add Layer.”</p>
+<p>ArcGIS Online will automatically add the data to your map window. You will notice that there is a high density of similar symbols, but you now have data from a web service in your map window!</p>
+<p>Look at the attribute table and play around with editing the symbology based on one of the fields. There is a lot of interesting info!</p>
+<h3 id="arcgis-desktop">ArcGIS Desktop</h3>
+<p>Now that you have access to a web service, you will want to know how to use it in your preferred GIS software. For this exercise, we will use ArcGIS Desktop.
+Open ArcGIS Pro, open the Catalog window, maximize “GIS Servers,” click “Add ArcGIS Server.”
+Paste the web service URL into the box next to “Server URL” and click “Finish.”
+Choose “Use GIS Services” and click “Next.”</p>
+<p>In the Catalog window, expand the service you just connected. Expand “OneStop.”</p>
+<p>Drag and drop “QueryEnvFacs” into your map window. Add a basemap if you have not done so.</p>
+<p>In the Table of Contents, maximize “OneStop/QueryEnvFacs, find “Leaking Underground Storage Tanks” and tick the box next to it.</p>
+<p>It is likely that you will not be able to see the symbols on the map. Zoom into a city or region and they will appear.</p>
+<p>You will notice that there is a high density of similar symbols, but you now have data from a web service in your map window!</p>
+<h3 id="_1"></h3>
+<p>Self-Guided Activity
+Using the skills learned here, use the BTAA Geoportal to: </p>
+<ol>
+<li>Find a web service of your choice</li>
+<li>Connect to it in QGIS or ArcGIS</li>
+<li>Load the data in your map window</li>
+<li>Take a screenshot of your data in the map window, add it to a Google doc, and write a paragraph explaining how this service might be useful to different kinds of users (general public, students, researchers, professionals, etc.).</li>
+</ol>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 30, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../glossary/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Glossary" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Glossary
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant - navigation.sections - content.tooltips - navigation.tabs - navigation.tabs.sticky - navigation.top"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>
