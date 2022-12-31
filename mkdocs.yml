@@ -1,0 +1,75 @@
+site_name: GeoBTAA Tutorials
+site_author: Big Ten Academic Alliance Geospatial Information Network
+copyright : "2022"
+# repo_url: https://github.com/geobtaa/tutorials
+theme: 
+   name: material
+   features:
+      - navigation.instant
+      - navigation.sections
+      - content.tooltips
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.top
+   logo: images/btaa-logo-white.png
+   icon:
+      repo: fontawesome/brands/github
+#    highlightjs: true
+#   titles_only: true
+#   include_homepage_in_sidebar: false
+plugins:
+  - search
+  - with-pdf:
+      output_path: tutorials.pdf
+  - pdf-export
+#       combined: false
+#   - git-revision-date-localized:
+#       enable_creation_date: false
+  - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       slide_effect: slide
+       width: 100%
+       height: auto
+       zoomable: true
+       draggable: true
+       skip_classes:
+         - custom-skip-class-name
+       auto_caption: true
+       caption_position: bottom
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - abbr
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+      
+# nav:
+# - HOME: 'index.md'
+# 
+# -  News: 'https://geobtaa.blogspot.com'
+# 
+# - Help: ''
+# 
+# - Tutorials:  'index.md'
+# 
+# - Metadata: '/metadata'
+
