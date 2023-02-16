@@ -1,16 +1,17 @@
 site_name: GeoBTAA Tutorials
 site_author: Big Ten Academic Alliance Geospatial Information Network
 copyright : "2022"
-# repo_url: https://github.com/geobtaa/tutorials
+site_url: https://geobtaa.github.io/tutorials
+
 theme: 
    name: material
    features:
       - navigation.instant
       - navigation.sections
       - content.tooltips
-      - navigation.tabs
-      - navigation.tabs.sticky
-      - navigation.top
+#       - navigation.tabs
+#       - navigation.tabs.sticky
+#       - navigation.top
    logo: images/btaa-logo-white.png
    icon:
       repo: fontawesome/brands/github
@@ -62,14 +63,9 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true 
       
-# nav:
-# - HOME: 'index.md'
-# 
-# -  News: 'https://geobtaa.blogspot.com'
-# 
-# - Help: ''
-# 
-# - Tutorials:  'index.md'
-# 
-# - Metadata: '/metadata'
+nav:
+- HOME: 'index.md'
+-  Find & Use GIS Web Services: 'tutorial_web-services.md'
+- Types of Geospatial Information: 'types_of_geospatial_information.md'
+
 

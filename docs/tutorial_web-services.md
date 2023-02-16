@@ -99,21 +99,21 @@ Now that you have access to a web service, you will want to know how to use it i
   1. Open QGIS and go to the Layer drop down menu. Click Add Layer > Add ArcGIS FeatureServer Layer.
 
 	<figure markdown>
-	![Add an ArcGIS FeatureServer Layer in QGIS](/images/qgis-add-layer.jpg)
+	![Add an ArcGIS FeatureServer Layer in QGIS](images/qgis-add-layer.jpg)
 	<figcaption>Add an ArcGIS FeatureServer Layer in QGIS</figcaption>
 	</figure>
 
   2. In the window that opens, click “New” to establish a new connection between QGIS and the web service.
 
   	<figure markdown>
-   ![New server connection in QGIS](/images/qgis-connect.jpg)	<figcaption>New server connection in QGIS</figcaption>
+   ![New server connection in QGIS](images/qgis-connect.jpg)	<figcaption>New server connection in QGIS</figcaption>
 	</figure>
 
   3. Give your connection a meaningful name, like “Iowa Environment Data”
   4. Paste the URL obtained from the geoportal into the empty box next to “URL” and click “OK.”
 
     <figure markdown>
-   ![Name and enter your service URL](/images/qgis-name-service.jpg)	<figcaption>Name and enter your service URL</figcaption>
+   ![Name and enter your service URL](images/qgis-name-service.jpg)	<figcaption>Name and enter your service URL</figcaption>
 	</figure>
 	
 	!!! Warning
@@ -123,19 +123,19 @@ Now that you have access to a web service, you will want to know how to use it i
   5. The Server Connection window will appear. Highlight “Leaking Underground Storage Tanks” and click “Add” at the bottom of the window.
 
     <figure markdown>
-   ![Name and enter your service URL](/images/qgis-server-connection-window.jpg)	<figcaption>QGIS Server Connection Window</figcaption>
+   ![Name and enter your service URL](images/qgis-server-connection-window.jpg)	<figcaption>QGIS Server Connection Window</figcaption>
 	</figure>
 	
   6. “Leaking Underground Storage Tanks” will appear in your Table of Contents. If you have not added a base map, do so now. As you can see, the map window is crowded with many symbols, but you now have data from a web service in your map window!
 	
 	<figure markdown>
-   ![QGIS web service display](/images/qgis-underground-storage-tanks.jpg)	<figcaption>Iowa Leaking Underground Storage Tanks web service</figcaption>
+   ![QGIS web service display](images/qgis-underground-storage-tanks.jpg)	<figcaption>Iowa Leaking Underground Storage Tanks web service</figcaption>
 	</figure>
 	
   7. Look at the attribute table and play around with editing the symbology based on one of the fields. There is a lot of interesting info!
 
   	<figure markdown>
-   ![QGIS web service display](/images/qgis-underground-storage-tanks-styled.jpg)	<figcaption>Iowa Leaking Underground Storage Tanks web service with layer styling</figcaption>
+   ![QGIS web service display](images/qgis-underground-storage-tanks-styled.jpg)	<figcaption>Iowa Leaking Underground Storage Tanks web service with layer styling</figcaption>
 	</figure>
 	
 
