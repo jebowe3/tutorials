@@ -43,7 +43,9 @@ https://sites.google.com/umn.edu/btaa-gdp/about/project-documents/glossary
   * Vector
   * Raster
   * Tabular
+
 * Geospatial information can be found from scanned maps
+
 * GIS data can be hosted online using web services
 
 <table>
@@ -81,14 +83,21 @@ https://sites.google.com/umn.edu/btaa-gdp/about/project-documents/glossary
 </table>
 
 * Vector data are comprised of vertices and lines (or arcs), represented explicitly in the form of XY coordinates.
+
 * The 3 basic geometry types for vector data are:
+
   * Points - XY coordinates
+
     * Example: cities, schools, incident locations
+
   * Lines - connecting the points in a set order
+
     * Example: roads, streams
-  * Polygons - a set of points in a particular order and
-Close it (the 1st and last point are the same)
+
+  * Polygons - a set of points in a particular order and close it (the 1st and last point are the same)
+
     * Example: a state, county, or census block
+
 * Most GIS applications do not allow mixed geometry type
 In a single layer
 
@@ -115,7 +124,57 @@ In a single layer
 
 ### Raster Data
 
+<table>
+  <tr>
+    <td>Vector</td>
+    <td rowspan="4">Web Services</td>
+  </tr>
+  <tr>
+    <th style="color:red;">Raster</th>
+  </tr>
+  <tr>
+    <td>Tabular</td>
+  </tr>
+  <tr>
+    <td>Scanned Map</td>
+  </tr>
+</table>
+
+* Raster data is made up of pixels with each pixel has its own 
+Value.
+
+* Raster data is usually used to represent surfaces.
+
+* Raster data model is commonly used for digital elevation models (DEM), aerial and satellite imagery, and land use land cover maps.
+
+* Raster data resolution: cell dimension, or the size of pixels.
+
+* Raster images can consume a large amount of storage space.
+
+![Raster Data Types](images/raster-data.png)  
+**Figure 06**. Raster Data Types *Used by permission of Paul Bolstad, GIS Fundamentals
+
+* Two types of raster data: **continuous** and **discrete**
+
+  * **Discrete** rasters have distinct themes or categories. Each class can be discretely defined, usually ba integer values. Example, land cover/use map.
+
+  * **Continuous** rasters are grid cells with gradual changing data such as elevation and temperature.
+
+![Raster Two Types](images/raster-two-types.png)  
+**Figure 07**. Continuous and Categorical Data *Used by permission of Paul Bolstad, GIS Fundamentals
+
+* Raster data are usually saved in the format of raster dataset, GeoTIFF, or many other formats.
+
 ### Vector vs. Raster
+
+|   |**Vector**|**Raster**|
+|---|---|---|
+|**Positional Precision**|Can be precise|Defined by cell size|
+|**Attribute Precision**|Poor for continuous data|Good for continuous data|
+|**Output Quality**|Very good, map like|Fair to poor, depending on resolution|
+|**Data Structure**|Often complex|Often quite simple|
+|**Storage Requirement**|Relatively small|Often quite large|
+|**Spatial Analysis**|Good topology relationship|Good for modeling|
 
 ### Tabular Data
 
