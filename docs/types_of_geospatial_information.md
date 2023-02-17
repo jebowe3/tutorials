@@ -178,6 +178,29 @@ Value.
 
 ### Tabular Data
 
+<table>
+  <tr>
+    <td>Vector</td>
+    <td rowspan="4">Web Services</td>
+  </tr>
+  <tr>
+    <td>Raster</td>
+  </tr>
+  <tr>
+    <th style="color:red;">Tabular</th>
+  </tr>
+  <tr>
+    <td>Scanned Map</td>
+  </tr>
+</table>
+
+* Tables with geospatial information can be used for mapping purpose in GIS.
+  * Tables with information that can be joined with an existing map 
+  Reference: Tutorial about table join
+  * Tables with XY coordinate information
+  * Tables with address information
+    * Geocoding
+
 ### Scanned Maps
 
 ### Web Services - GIS
