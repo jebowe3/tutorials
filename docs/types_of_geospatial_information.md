@@ -195,15 +195,97 @@ Value.
 </table>
 
 * Tables with geospatial information can be used for mapping purpose in GIS.
+
   * Tables with information that can be joined with an existing map 
   Reference: Tutorial about table join
+
   * Tables with XY coordinate information
+
   * Tables with address information
+
     * Geocoding
 
 ### Scanned Maps
 
+<table>
+  <tr>
+    <td>Vector</td>
+    <td rowspan="4">Web Services</td>
+  </tr>
+  <tr>
+    <td>Raster</td>
+  </tr>
+  <tr>
+    <td>Tabular</td>
+  </tr>
+  <tr>
+    <th style="color:red;">Scanned Map</th>
+  </tr>
+</table>
+
+* A scanned map stored as an image file.
+
+    * Georeferenced scanned map: has a linked file that stores spatial information so that it can be overlayed with other digital maps in GIS. Usually stored as GeoTIFF.
+
+    * Un-georeferenced scanned map: The presence of coordinates in the record’s metadata does not make the map georeferenced. Can be saved as TIFF or JPG, etc.
+
+![Scanned Map](images/scan-map.png)  
+**Figure 08**. A Scanned Map
+
 ### Web Services - GIS
+
+<table>
+  <tr>
+    <td>Vector</td>
+    <th rowspan="4" style="color:red;">Web Services</th>
+  </tr>
+  <tr>
+    <td>Raster</td>
+  </tr>
+  <tr>
+    <td>Tabular</td>
+  </tr>
+  <tr>
+    <td>Scanned Map</td>
+  </tr>
+</table>
+
+* A streaming GIS layer that can be viewed and queried in a
+browser or GIS application.
+
+* Types of GIS web services - they are often provided using either Esri format or open standard defined by Open Geospatial Consortium (OGC)
+
+<table>
+  <tr>
+    <th rowspan="4">Esri</th>
+    <td>ArcGIS Dynamic Map Layer Service</td>
+    <td>Vector data. Map image layers are dynamically rendered.</td>
+  </tr>
+  <tr>
+    <td>ArcGIS Feature Layer Service</td>
+    <td>Displays vector data as individual or collected features.</td>
+  </tr>
+  <tr>
+    <td>ArcGIS Image Map Layer Service</td>
+    <td>Displays raster data (a grid of cells used to store imagery).</td>
+  </tr>
+  <tr>
+    <td>ArcGIS Tiled Map Layer Service</td>
+    <td>Displays set of web-accessible tiles that reside on a server.</td>
+  </tr>
+  <tr>
+    <th rowspan="2">OGC</th>
+    <td>Web Mapping Service (WMS)</td>
+    <td>Renders a geospatial dataset as map images.</td>
+  </tr>
+    <td>Web Feature Service (WFS)</td>
+    <td>Serves queryable geographic features.</td>  
+  <tr>
+    <th>IIIF</th>
+    <td>International Image Interoperability Framework (IIIF)</td>
+    <td>Displays an image from a server. This image can be panned and zoomed.</td>
+  </tr>
+</table>
 
 ## How to Find These Data in the BTAA Geoportal
 
