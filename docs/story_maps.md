@@ -15,7 +15,8 @@ hide:
 - [Introduction](#introduction)
 - [Basics](#basics)
 - [Intermediate](#intermediate)
-- [Explore & Resources](#explore-&-resources)
+- [Explore](#explore)
+- [Resources](#resources)
 
 ## Introduction
 
@@ -96,3 +97,49 @@ Immersive options for content:
 -   Sidecar ‒ Stationary text/media panel with a scrolling narrative panel that can include web maps
 
 -   Map tour ‒ Showcase a set of locations
+
+## Intermediate
+
+Once you have the basics down, try something a little more fancy... 
+
+Immersive options for content:
+
+-   Slideshow ‒ Full screen, media-focused layout
+
+-   Sidecar ‒ Stationary text/media panel with a scrolling narrative panel that can include web maps
+
+-   Map tour ‒ Showcase a set of locations
+
+![Immersive Options](images/immersive.png)
+
+**Figure 07**. Immersive Options
+
+## Explore
+
+[Example Story Map from the Big Ten Academic Alliance Geospatial Data Project](https://storymaps.arcgis.com/stories/4c3e1c4e72764a43914862193574c028)
+
+![Compare Maps](images/compare-maps.png)
+
+**Figure 08**. Compare Maps
+
+![Open Data Status](images/open-data-status.png)
+
+**Figure 09**. Open Data Status
+
+![Compare Images](images/compare-images.png)
+
+**Figure 10**. Compare Images
+
+## Resources
+
+-   [Instruction for Creating Dynamic Digital Narratives](https://storymaps.arcgis.com/stories/d15f1045ffcb4fdea7672d1cafafdc12)
+
+-   [Nine steps to great storytelling](https://storymaps.arcgis.com/stories/429bc4eed5f145109e603c9711a33407)
+
+-   [Five Principles of Effective Storytelling](https://storymaps-classic.arcgis.com/en/five-principles/)
+
+-   [Esri Resources Page](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/resources)
+
+-   [Visual storytelling: Bring your narrative to life with an effective mix of photos](https://www.esri.com/arcgis-blog/products/story-maps/constituent-engagement/visual-storytelling-bring-your-narrative-to-life-with-an-effective-mix-of-photos/)
+
+-   [How to make an awful story map](https://storymaps.arcgis.com/stories/585db547dd7f4403bb30a3eb13fd55ad)
