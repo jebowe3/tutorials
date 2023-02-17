@@ -93,7 +93,25 @@ Close it (the 1st and last point are the same)
 In a single layer
 
 ![Vector Data Types](images/vector-data.png)  
-**Vector Data Types**. *Used by permission of Paul Bolstad, GIS Fundamentals. 
+**Figure 01**. Vector Data Types *Used by permission of Paul Bolstad, GIS Fundamentals
+
+* Each vector feature has attribute data that describe it.
+
+![Attribute Data](images/attributes.png)  
+**Figure 02**. Attribute Data
+
+* Vector data are usually saved as a shapefile or a feature class in a geodatabase (In Arc/Info (1980-1999), it can also be saved in coverage format).
+
+* Vector symbology:
+
+![Single Symbol](images/single-symbol.png)  
+**Figure 03**. Single Symbol
+
+![Categorical Symbol](images/categorical-symbol.png)  
+**Figure 04**. Categorical Symbol
+
+![Quantitative Symbol](images/quantitative-symbol.png)  
+**Figure 05**. Quantitative Symbol
 
 ### Raster Data
 
