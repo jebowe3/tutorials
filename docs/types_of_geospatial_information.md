@@ -90,7 +90,10 @@ https://sites.google.com/umn.edu/btaa-gdp/about/project-documents/glossary
 Close it (the 1st and last point are the same)
     * Example: a state, county, or census block
 * Most GIS applications do not allow mixed geometry type
-In a single layer 
+In a single layer
+
+![Vector Data Types](images/vector-data.png)  
+**Vector Data Types**. *Used by permission of Paul Bolstad, GIS Fundamentals. 
 
 ### Raster Data
 
