@@ -289,10 +289,51 @@ browser or GIS application.
 
 ## How to Find These Data in the BTAA Geoportal
 
+The [Big Ten Academic Alliance Geoportal](https://geo.btaa.org/) connects users to digital geospatial resources, including **GIS datasets**, **web services**, and **digitized historical maps** from multiple data clearinghouses and library catalogs. The site is solely a search tool and does not host any data.
+
 ### Search by Resource Class
+
+Once you are at the search results page of BTAA Geoportal, you have filter options on the left of the screen. You can filter your search by **Resource Class**.
+
+* **Datasets:** vector or raster data
+
+* **Maps:** scanned maps and photographs
+
+* **Web Services:** for items with a web service, such as an ArcGIS REST service, an OGC web service, or IIIF.
+
+* **Imagery** Aerial photography and satellite imagery
+
+* **Collections:** describe a group of records, typically as a description of and website link to the group’s original geoportal or library.
+
+* **Websites:** interactive web resource, such as dashboard.
 
 ### Related Resources
 
+* [BTAA Geoportal Project Glossary of Terms](https://sites.google.com/umn.edu/btaa-gdp/about/project-documents/glossary)
+
+* [Finding Geospatial Data (Tutorial)](https://docs.google.com/presentation/d/1xL_DnaKo6ECf7qcLVHdXPTVafcFk0wCHB7CLBayRPnA/edit#slide=id.g86c86e5ff3_0_881)
+
+* [Linking tabular data to geospatial data (Tutorial)](https://docs.google.com/presentation/d/16wAdW9CNF_-8uzbShy5BCR_DXCQwsnpJ5mRWvp4Hubw/edit#slide=id.p1)
+
+* [Using GIS web services (Tutorial)](https://docs.google.com/presentation/d/1wDmTt4HCwKOFn_4uSUBW2rrJlxWODiFfs-lP8-CWLQU/edit#slide=id.p2)
+
 ### Exercise
 
+* Find an example for each of following type of data from BTAA geoportal. Discuss the use cases of each data type, as well as pros/cons of the particular data type.
+  * Vector data
+  * Raster data
+  * Scanned map
+  * Web service
+
 ## Wrapping Up
+
+This tutorial is part of an educational series produced by members of the [Big Ten Academic Alliance Geoportal](https://geo.btaa.org/). The BTAA Geoportal connects users to digital geospatial resources, including GIS datasets, web services, and digitized historical maps from multiple data clearinghouses and library catalogs. The site is solely a search tool and does not host any data.
+
+To access additional tutorials in this series that cover various other topics, visit: https://sites.google.com/umn.edu/btaa-gdp/tutorials. 
+
+**License statement:**
+Except where otherwise noted, content in this tutorial is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+
+
+**Providing attribution for this work:**
+“Types of Geospatial Information” by [Nicole Kong](https://www.lib.purdue.edu/people/kongn) is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
