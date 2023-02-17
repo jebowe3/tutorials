@@ -22,8 +22,8 @@ hide:
   - [Web Services - GIS](#web-services-gis)
 - [How to Find These Data in the BTAA Geoportal](#how-to-find-these-data-in-the-btaa-geoportal)
   - [Search by Resource Class](#search-by-resource-class)
-  - [Related Resources](#related-resources)
-  - [Exercise](#exercise)
+- [Related Resources](#related-resources)
+- [Exercise](#exercise)
 - [Wrapping Up](#wrapping-up)
 
 ## Introduction
@@ -307,7 +307,7 @@ Once you are at the search results page of BTAA Geoportal, you have filter optio
 
 * **Websites:** interactive web resource, such as dashboard.
 
-### Related Resources
+## Related Resources
 
 * [BTAA Geoportal Project Glossary of Terms](https://sites.google.com/umn.edu/btaa-gdp/about/project-documents/glossary)
 
@@ -317,7 +317,7 @@ Once you are at the search results page of BTAA Geoportal, you have filter optio
 
 * [Using GIS web services (Tutorial)](https://docs.google.com/presentation/d/1wDmTt4HCwKOFn_4uSUBW2rrJlxWODiFfs-lP8-CWLQU/edit#slide=id.p2)
 
-### Exercise
+## Exercise
 
 * Find an example for each of following type of data from BTAA geoportal. Discuss the use cases of each data type, as well as pros/cons of the particular data type.
   * Vector data
