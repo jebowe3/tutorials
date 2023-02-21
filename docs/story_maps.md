@@ -30,16 +30,14 @@ Story Maps allow you to:
 
 -   Experiment!
 
-![Explore Stories](images/explore-stories.png)
-
+![Explore Stories](images/explore-stories.png)\
 **Figure 01**. [Explore Stories](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/stories)
 
 ## Basics
 
 The first step is to log on to ArcGIS Online, go to your Content section, and click Create then Story Maps.
 
-![Create Story Map](images/start-story.png)
-
+![Create Story Map](images/start-story.png)\
 **Figure 02**. Create Story Map
 
 Give you story a title and a subtitle and/or an introduction.
@@ -48,14 +46,12 @@ Add cover image or video (upper right).
 
 Click the “+” symbol to add content to the story map.
 
-![Title and Content](images/title-content.png)
-
+![Title and Content](images/title-content.png)\
 **Figure 03**. Adding Title and Content
 
 Be sure to take advantage of the options (at the bottom/end of the story map) to add credits and content attribution.
 
-![Credits](images/credits.png)
-
+![Credits](images/credits.png)\
 **Figure 04**. Adding Credits
 
 Basic options for content:
@@ -66,8 +62,7 @@ Basic options for content:
 
 -   Separator ‒ Insert a horizontal line
 
-![Content Options](images/content-options.png)
-
+![Content Options](images/content-options.png)\
 **Figure 05**. Content Options
 
 Media options for content:
@@ -86,8 +81,7 @@ Media options for content:
 
 -   Swipe ‒ Compare two web maps or images
 
-![Media Options](images/media-options.png)
-
+![Media Options](images/media-options.png)\
 **Figure 06**. Media Options
 
 Immersive options for content:
@@ -110,24 +104,20 @@ Immersive options for content:
 
 -   Map tour ‒ Showcase a set of locations
 
-![Immersive Options](images/immersive.png)
-
+![Immersive Options](images/immersive.png)\
 **Figure 07**. Immersive Options
 
 ## Explore
 
 [Example Story Map from the Big Ten Academic Alliance Geospatial Data Project](https://storymaps.arcgis.com/stories/4c3e1c4e72764a43914862193574c028)
 
-![Compare Maps](images/compare-maps.png)
-
+![Compare Maps](images/compare-maps.png)\
 **Figure 08**. Compare Maps
 
-![Open Data Status](images/open-data-status.png)
-
+![Open Data Status](images/open-data-status.png)\
 **Figure 09**. Open Data Status
 
-![Compare Images](images/compare-images.png)
-
+![Compare Images](images/compare-images.png)\
 **Figure 10**. Compare Images
 
 ## Resources
