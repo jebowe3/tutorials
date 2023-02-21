@@ -63,9 +63,9 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true 
       
-nav:
-- HOME: 'index.md'
--  Find & Use GIS Web Services: 'tutorial_web-services.md'
-- Types of Geospatial Information: 'types_of_geospatial_information.md'
+# nav:
+# - HOME: 'index.md'
+# -  Find & Use GIS Web Services: 'tutorial_web-services.md'
+# - Types of Geospatial Information: 'types_of_geospatial_information.md'
 
 
