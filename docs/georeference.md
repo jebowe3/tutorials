@@ -88,13 +88,14 @@ Georeferencing is a commonly used tool to accurately digitize data on a paper ma
 
 </figure>
 
-Here are some tips for choosing control points:
+!!! Tips
+    Here are some tips for choosing control points:
 
-- The number of control points needed depends on the image being used. Normally, at least four control points are required for georeferencing.
+    - The number of control points needed depends on the image being used. Normally, at least four control points are required for georeferencing.
 
-- Choose road crossings or sidewalk intersections, because the edges of roads may change over time.
+    - Choose road crossings or sidewalk intersections, because the edges of roads may change over time.
 
-- The control points should be spread across the unreferenced image.
+    - The control points should be spread across the unreferenced image.
 
 12. Click View Link Table. It is up to you to determine the acceptable residual values. If a link has a residual value much larger than others, the link should be deleted. 
 
