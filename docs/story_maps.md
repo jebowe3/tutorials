@@ -11,12 +11,14 @@ hide:
 
 # Story Maps
 
-## Contents
-- [Introduction](#introduction)
-- [Basics](#basics)
-- [Intermediate](#intermediate)
-- [Explore](#explore)
-- [Resources](#resources)
+*This tutorial is part of an educational series produced by members of the [Big Ten Academic Alliance Geospatial Information Network](https://geo.btaa.org).*
+
+:fontawesome-solid-user: Prepared by: Ryan Mattke, Map and Geospatial Information Librarian, University of Minnesota (matt0089@umn.edu). 
+
+:material-creative-commons: These slides and the accompanying activities are licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license.
+
+------------------------------
+
 
 ## Introduction
 
@@ -30,15 +32,21 @@ Story Maps allow you to:
 
 -   Experiment!
 
-![Explore Stories](images/explore-stories.png)\
-**Figure 01**. [Explore Stories](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/stories)
+<figure markdown>
+
+![Explore Stories](images/explore-stories.png)<figcaption>[Explore Stories](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/stories)</figcaption>
+
+</figure>
 
 ## Basics
 
 The first step is to log on to ArcGIS Online, go to your Content section, and click Create then Story Maps.
 
-![Create Story Map](images/start-story.png)\
-**Figure 02**. Create Story Map
+<figure markdown>
+
+![Create Story Map](images/start-story.png)<figcaption>Create Story Map</figcaption>
+
+</figure>
 
 Give you story a title and a subtitle and/or an introduction.
 
@@ -46,13 +54,19 @@ Add cover image or video (upper right).
 
 Click the “+” symbol to add content to the story map.
 
-![Title and Content](images/title-content.png)\
-**Figure 03**. Adding Title and Content
+<figure markdown>
+
+![Title and Content](images/title-content.png)<figcaption>Adding Title and Content</figcaption>
+
+</figure>
 
 Be sure to take advantage of the options (at the bottom/end of the story map) to add credits and content attribution.
 
-![Credits](images/credits.png)\
-**Figure 04**. Adding Credits
+<figure markdown>
+
+![Credits](images/credits.png)<figcaption>Adding Credits</figcaption>
+
+</figure>
 
 Basic options for content:
 
@@ -62,8 +76,11 @@ Basic options for content:
 
 -   Separator ‒ Insert a horizontal line
 
-![Content Options](images/content-options.png)\
-**Figure 05**. Content Options
+<figure markdown>
+
+![Content Options](images/content-options.png)<figcaption>Content Options</figcaption>
+
+</figure>
 
 Media options for content:
 
@@ -81,8 +98,11 @@ Media options for content:
 
 -   Swipe ‒ Compare two web maps or images
 
-![Media Options](images/media-options.png)\
-**Figure 06**. Media Options
+<figure markdown>
+
+![Media Options](images/media-options.png)<figcaption>Media Options</figcaption>
+
+</figure>
 
 Immersive options for content:
 
@@ -104,21 +124,33 @@ Immersive options for content:
 
 -   Map tour ‒ Showcase a set of locations
 
-![Immersive Options](images/immersive.png)\
-**Figure 07**. Immersive Options
+<figure markdown>
+
+![Immersive Options](images/immersive.png)<figcaption>Immersive Options</figcaption>
+
+</figure>
 
 ## Explore
 
 [Example Story Map from the Big Ten Academic Alliance Geospatial Data Project](https://storymaps.arcgis.com/stories/4c3e1c4e72764a43914862193574c028)
 
-![Compare Maps](images/compare-maps.png)\
-**Figure 08**. Compare Maps
+<figure markdown>
 
-![Open Data Status](images/open-data-status.png)\
-**Figure 09**. Open Data Status
+![Compare Maps](images/compare-maps.png)<figcaption>Compare Maps</figcaption>
 
-![Compare Images](images/compare-images.png)\
-**Figure 10**. Compare Images
+</figure>
+
+<figure markdown>
+
+![Open Data Status](images/open-data-status.png)<figcaption>Open Data Status</figcaption>
+
+</figure>
+
+<figure markdown>
+
+![Compare Images](images/compare-images.png)<figcaption>Compare Images</figcaption>
+
+</figure>
 
 ## Resources
 
