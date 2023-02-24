@@ -11,20 +11,11 @@ hide:
 
 # Types of Geospatial Information
 
-## Contents
-- [Introduction](#introduction)
-- [Geospatial Information Types](#geospatial-information-types)
-  - [Vector Data](#vector-data)
-  - [Raster Data](#raster-data)
-  - [Vector vs. Raster](#vector-vs-raster)
-  - [Tabular Data](#tabular-data)
-  - [Scanned Maps](#scanned-maps)
-  - [Web Services - GIS](#web-services-gis)
-- [How to Find These Data in the BTAA Geoportal](#how-to-find-these-data-in-the-btaa-geoportal)
-  - [Search by Resource Class](#search-by-resource-class)
-- [Related Resources](#related-resources)
-- [Exercise](#exercise)
-- [Wrapping Up](#wrapping-up)
+*This tutorial is part of an educational series produced by members of the [Big Ten Academic Alliance Geospatial Information Network](https://geo.btaa.org).*
+
+:fontawesome-solid-user: Prepared by: Nicole Kong, Associate Professor, GIS Specialist, Purdue University (kongn@purdue.edu). 
+
+:material-creative-commons: These slides and the accompanying activities are licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license.
 
 ## Introduction
 
@@ -101,26 +92,41 @@ https://sites.google.com/umn.edu/btaa-gdp/about/project-documents/glossary
 * Most GIS applications do not allow mixed geometry type
 In a single layer
 
-![Vector Data Types](images/vector-data.png)\
-**Figure 01**. Vector Data Types *Used by permission of Paul Bolstad, GIS Fundamentals
+<figure markdown>
+
+![Vector Data Types](images/vector-data.png)<figcaption>Vector Data Types *Used by permission of Paul Bolstad, GIS Fundamentals</figcaption>
+
+</figure>
 
 * Each vector feature has attribute data that describe it.
 
-![Attribute Data](images/attributes.png)\
-**Figure 02**. Attribute Data
+<figure markdown>
+
+![Attribute Data](images/attributes.png)<figcaption>Attribute Data</figcaption>
+
+</figure>
 
 * Vector data are usually saved as a shapefile or a feature class in a geodatabase (In Arc/Info (1980-1999), it can also be saved in coverage format).
 
 * Vector symbology:
 
-![Single Symbol](images/single-symbol.png)\
-**Figure 03**. Single Symbol
+<figure markdown>
 
-![Categorical Symbol](images/categorical-symbol.png)\
-**Figure 04**. Categorical Symbol
+![Single Symbol](images/single-symbol.png)<figcaption>Single Symbol</figcaption>
 
-![Quantitative Symbol](images/quantitative-symbol.png)\
-**Figure 05**. Quantitative Symbol
+</figure>
+
+<figure markdown>
+
+![Categorical Symbol](images/categorical-symbol.png)<figcaption>Categorical Symbol</figcaption>
+
+</figure>
+
+<figure markdown>
+
+![Quantitative Symbol](images/quantitative-symbol.png)<figcaption>Quantitative Symbol</figcaption>
+
+</figure>
 
 ### Raster Data
 
@@ -151,8 +157,11 @@ Value.
 
 * Raster images can consume a large amount of storage space.
 
-![Raster Data Types](images/raster-data.png)\
-**Figure 06**. Raster Data Types *Used by permission of Paul Bolstad, GIS Fundamentals
+<figure markdown>
+
+![Raster Data Types](images/raster-data.png)<figcaption>Raster Data Types *Used by permission of Paul Bolstad, GIS Fundamentals</figcaption>
+
+</figure>
 
 * Two types of raster data: **continuous** and **discrete**
 
@@ -160,8 +169,11 @@ Value.
 
   * **Continuous** rasters are grid cells with gradual changing data such as elevation and temperature.
 
-![Raster Two Types](images/raster-two-types.png)\
-**Figure 07**. Continuous and Categorical Data *Used by permission of Paul Bolstad, GIS Fundamentals
+<figure markdown>
+
+![Raster Two Types](images/raster-two-types.png)<figcaption>Continuous and Categorical Data *Used by permission of Paul Bolstad, GIS Fundamentals</figcaption>
+
+</figure>
 
 * Raster data are usually saved in the format of raster dataset, GeoTIFF, or many other formats.
 
@@ -229,8 +241,11 @@ Value.
 
     * Un-georeferenced scanned map: The presence of coordinates in the record’s metadata does not make the map georeferenced. Can be saved as TIFF or JPG, etc.
 
-![Scanned Map](images/scan-map.png)\
-**Figure 08**. A Scanned Map
+<figure markdown>
+
+![Scanned Map](images/scan-map.png)<figcaption>A Scanned Map</figcaption>
+
+</figure>
 
 ### Web Services - GIS
 
