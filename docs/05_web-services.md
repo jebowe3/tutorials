@@ -1,5 +1,5 @@
 ---
-title: Find & Use GIS Web Services with the BTAA Geoportal
+title: Find & Use GIS Web Services
 summary: Tutorial to walk through the steps of loading an ArcGIS Feature Service in several of the most commonly used GIS platforms. 
 authors:
     - Jay Bowen
@@ -9,15 +9,20 @@ hide:
  - navigation
 ---
 
-# Find & Use GIS Web Services with the BTAA Geoportal
+!!! Info
 
-*This tutorial is part of an educational series produced by members of the [Big Ten Academic Alliance Geospatial Information Network](https://geo.btaa.org).*
+	:material-arrow-right-box: Purpose: To help students evaluate geospatial information.
 
-:fontawesome-solid-user: Prepared by: Jay Bowen, GIS Specialist, University of Iowa (jay-bowen@uiowa.edu). 
+	
+	:timer: Estimated time to complete: 30-40 minutes
 
-:material-creative-commons: These slides and the accompanying activities are licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license.
+	:fontawesome-solid-user: Prepared by: Jay Bowen, GIS Specialist, University of Iowa (jay-bowen@uiowa.edu). 
+
+	:material-creative-commons: License: Except where otherwise noted, content in this tutorial is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+
 
 ??? Note "Note for Instructors"
+
 	This tutorial is intended for GIS users with an established cursory understanding of how to use GIS software for visualizing spatial data and making maps, regardless of whether they are graduate, undergraduate, or faculty/staff users. These users may have encountered web services for GIS in formats like WMS, WMTS, or WFS, but are unsure of how to use them. This tutorial is meant to introduce users to these formats, demonstrate how to find them in the BTAA Geoportal, and show how to use them in QGIS, ArcGIS Desktop, ArcGIS Online, and ArcGIS Pro. For an extra challenge involving the use of ArcGIS Feature Services to create [a web map with Leaflet](https://jebowe3.github.io/using-web-services/Iowa-511/index.html), please follow the [link to my tutorial on GitHub](https://jebowe3.github.io/using-web-services/).
 
 
@@ -37,8 +42,13 @@ Through completing this tutorial, students will:
 2. Locate and load an ArcGIS Feature Service with the BTAA Geoportal and their preferred GIS software.
 3. Find and load their own web service through the BTAA Geoportal and consider the utility of their data to different kinds of users.
 
+!!! tip
+
+	Click on any of the images in this tutorial to zoom in.
+
 
 ## Intro to Web Services
+
 Several types of web services available to GIS users that serve geospatial data in different formats from web servers. As documented in the tutorial, Types of Geospatial Information by Nicole Kong, geospatial data for web services fall into four categories: vector, raster, tabular, and scanned maps. For this exercise, we will focus on the categories below:
 
 | Data Type   | What is it?                                                | Relevant Web Service          |
@@ -99,21 +109,21 @@ Now that you have access to a web service, you will want to know how to use it i
   1. Open QGIS and go to the Layer drop down menu. Click Add Layer > Add ArcGIS FeatureServer Layer.
 
 	<figure markdown>
-	![Add an ArcGIS FeatureServer Layer in QGIS](images/qgis-add-layer.jpg)
+	![Add an ArcGIS FeatureServer Layer in QGIS](../images/qgis-add-layer.jpg){ width="500" }
 	<figcaption>Add an ArcGIS FeatureServer Layer in QGIS</figcaption>
 	</figure>
 
   2. In the window that opens, click “New” to establish a new connection between QGIS and the web service.
 
   	<figure markdown>
-   ![New server connection in QGIS](images/qgis-connect.jpg)	<figcaption>New server connection in QGIS</figcaption>
+   ![New server connection in QGIS](../images/qgis-connect.jpg){ width="500" }	<figcaption>New server connection in QGIS</figcaption>
 	</figure>
 
   3. Give your connection a meaningful name, like “Iowa Environment Data”
   4. Paste the URL obtained from the geoportal into the empty box next to “URL” and click “OK.”
 
     <figure markdown>
-   ![Name and enter your service URL](images/qgis-name-service.jpg)	<figcaption>Name and enter your service URL</figcaption>
+   ![Name and enter your service URL](../images/qgis-name-service.jpg){ width="500" }	<figcaption>Name and enter your service URL</figcaption>
 	</figure>
 	
 	!!! Warning
@@ -123,82 +133,115 @@ Now that you have access to a web service, you will want to know how to use it i
   5. The Server Connection window will appear. Highlight “Leaking Underground Storage Tanks” and click “Add” at the bottom of the window.
 
     <figure markdown>
-   ![Name and enter your service URL](images/qgis-server-connection-window.jpg)	<figcaption>QGIS Server Connection Window</figcaption>
+   ![Name and enter your service URL](../images/qgis-server-connection-window.jpg){ width="500" }	<figcaption>QGIS Server Connection Window</figcaption>
 	</figure>
 	
   6. “Leaking Underground Storage Tanks” will appear in your Table of Contents. If you have not added a base map, do so now. As you can see, the map window is crowded with many symbols, but you now have data from a web service in your map window!
 	
 	<figure markdown>
-   ![QGIS web service display](images/qgis-underground-storage-tanks.jpg)	<figcaption>Iowa Leaking Underground Storage Tanks web service</figcaption>
+   ![QGIS web service display](../images/qgis-underground-storage-tanks.jpg){ width="500" }	<figcaption>Iowa Leaking Underground Storage Tanks web service</figcaption>
 	</figure>
 	
   7. Look at the attribute table and play around with editing the symbology based on one of the fields. There is a lot of interesting info!
 
   	<figure markdown>
-   ![QGIS web service display](images/qgis-underground-storage-tanks-styled.jpg)	<figcaption>Iowa Leaking Underground Storage Tanks web service with layer styling</figcaption>
+   ![QGIS web service display](../images/qgis-underground-storage-tanks-styled.jpg){ width="500" }	<figcaption>Iowa Leaking Underground Storage Tanks web service with layer styling</figcaption>
 	</figure>
 	
 
-
-
-
-
 ### ArcGIS Pro
 Now that you have access to a web service, you will want to know how to use it in your preferred GIS software. For this exercise, we will use ArcGIS Pro.
-Open ArcGIS Pro, go to the Insert tab, and click “Connections.”
-In these options, you will also notice options for other types of web services. You can experiment with adding these later.
-Click “New ArcGIS Server.”
 
-Paste the URL obtained from the geoportal into the empty box next to Server URL and click “OK.”
+   1. Open ArcGIS Pro, go to the Insert tab, and click “Connections.”
 
+    <figure markdown>
+       ![ArcGIS Pro Insert Tab](../images/arcgis-pro-insert.png){ width="500" }<figcaption>ArcGIS Pro Insert Tab</figcaption>
+    </figure>
+2. Click “New ArcGIS Server.”	
+    <figure markdown>
+	   ![ArcGIS Pro Connections](../images/arcgis-pro-connections.png){ width="500" }<figcaption>ArcGIS Pro Connections. In these options, you will also notice options for other types of web services. You can experiment with adding these later.</figcaption>
+    </figure>
+3. Paste the URL obtained from the geoportal into the empty box next to Server URL and click “OK.”
+    <figure markdown>
+	   ![ArcGIS Pro Add Connection](../images/arcgis-pro-add-connection.png){ width="500" }.   <figcaption>ArcGIS Pro Add Connection</figcaption>
+    </figure>
+4. In the Catalog window, open “Project,” expand “Servers,” and expand the service you just connected.
+    <figure markdown>
+   ![ArcGIS Pro Project Tab](../images/arcgis-pro-project-tab.png){ width="500" }<figcaption>ArcGIS Pro Project Tab. Notice that you are connected to all the services the Iowa DNR offers.</figcaption>
+    </figure>
+5. Expand “OneStop” and “QueryEnvFacs.”
+6. Use “Leaking Underground Storage Tanks” and select “Add To Current Map.”
+    <figure markdown>
+   ![ArcGIS Pro add web service](../images/arcgis-pro-add-to-map.png){ width="500" }<figcaption>ArcGIS Pro add web service</figcaption>
+	</figure>
 
-In the Catalog window, open “Project,” expand “Servers,” and expand the service you just connected.
-
-Notice that you are connected to all the services the Iowa DNR offers.
-
-Expand “OneStop” and “QueryEnvFacs.”
-
-Use “Leaking Underground Storage Tanks” and select “Add To Current Map.”
-
-
-You may need to zoom into your map in order to see the data, as it is scale-dependent upon loading in Pro. You will also notice that the map window is crowded with many symbols, but you now have data from a web service in your map window!
-
-Look at the attribute table and play around with editing the symbology based on one of the fields. There is a lot of interesting info!
-
+    <figure markdown>
+   ![ArcGIS Pro map](../images/arcgis-pro-map.png){ width="500" }<figcaption>ArcGIS Pro map. You may need to zoom into your map in order to see the data, as it is scale-dependent upon loading in Pro. You will also notice that the map window is crowded with many symbols, but you now have data from a web service in your map window!</figcaption>
+	</figure>
+7. Look at the attribute table and play around with editing the symbology based on one of the fields. There is a lot of interesting info!
+    <figure markdown>
+   ![ArcGIS Pro attributes](../images/arcgis-pro-attributes.png){ width="500" }<figcaption>ArcGIS Pro attribute table</figcaption>
+	</figure>
 
 ### ArcGIS Online
 Now that you have access to a web service, you will want to know how to use it in your preferred GIS software. For this exercise, we will use ArcGIS Online.
 Make sure to select “An ArcGIS Server Web Service” for this data. You will also notice options for other types of web services. You can experiment with adding these later.
-Open ArcGIS Online, go to the Add tab, and click “Add Layer from Web.”
-Copy and paste the web service URL in the empty box next to “URL” and click “Add Layer.”
 
-ArcGIS Online will automatically add the data to your map window. You will notice that there is a high density of similar symbols, but you now have data from a web service in your map window!
+1. Open ArcGIS Online, go to the Add tab, and click “Add Layer from Web.”
+    <figure markdown>
+   ![ArcGIS Online](../images/arcgis-online-add-layer.png){ width="500" }<figcaption>ArcGIS Online Add Layer</figcaption>
+	</figure>
+2. Copy and paste the web service URL in the empty box next to “URL” and click “Add Layer.”
+    <figure markdown>
+   ![ArcGIS Online](../images/arcgis-online-add-layer-from-web.png){ width="500" }<figcaption>ArcGIS Online Add Layer</figcaption>
+	</figure>
+	
+	<figure markdown>
+   ![ArcGIS Online](../images/arcgis-online-content.png){ width="500" }<figcaption>ArcGIS Online Add Layer. ArcGIS Online will automatically add the data to your map window. You will notice that there is a high density of similar symbols, but you now have data from a web service in your map window!</figcaption>
+	</figure>
+	
+3. Look at the attribute table and play around with editing the symbology based on one of the fields. There is a lot of interesting info!
 
-Look at the attribute table and play around with editing the symbology based on one of the fields. There is a lot of interesting info!
-
+	<figure markdown>
+   ![ArcGIS Online](../images/arcgis-online-attributes.png){ width="500" }<figcaption>ArcGIS Online Attribute Table</figcaption>
+	</figure>
 
 
 ### ArcGIS Desktop
 Now that you have access to a web service, you will want to know how to use it in your preferred GIS software. For this exercise, we will use ArcGIS Desktop.
-Open ArcGIS Pro, open the Catalog window, maximize “GIS Servers,” click “Add ArcGIS Server.”
-Paste the web service URL into the box next to “Server URL” and click “Finish.”
-Choose “Use GIS Services” and click “Next.”
 
-In the Catalog window, expand the service you just connected. Expand “OneStop.”
+1. Open ArcGIS Pro, open the Catalog window
+	<figure markdown>
+   ![ArcGIS Desktop](../images/arcgis-desktop-1.png){ width="500" }<figcaption>ArcGIS Desktop Catalog</figcaption>
+	</figure>
+2. Maximize “GIS Servers” and click “Add ArcGIS Server.”
+	<figure markdown>
+   ![ArcGIS Desktop](../images/arcgis-desktop-2.png){ width="500" }<figcaption>ArcGIS Desktop - add ArcGIS Server</figcaption>
+	</figure>
+3. Paste the web service URL into the box next to “Server URL” and click “Finish.”
+	<figure markdown>
+   ![ArcGIS Desktop](../images/arcgis-desktop-3.png){ width="500" }<figcaption>ArcGIS Desktop</figcaption>
+	</figure>
+4. Choose “Use GIS Services” and click “Next.”
+	<figure markdown>
+   ![ArcGIS Desktop](../images/arcgis-desktop-4.png){ width="500" }<figcaption>ArcGIS Desktop</figcaption>
+	</figure>
+5. In the Catalog window, expand the service you just connected. Expand “OneStop.”
+6. Drag and drop “QueryEnvFacs” into your map window. Add a basemap if you have not done so.
+7. In the Table of Contents, maximize “OneStop/QueryEnvFacs, find “Leaking Underground Storage Tanks” and tick the box next to it.
+    <figure markdown>
+   ![ArcGIS Desktop](../images/arcgis-desktop-5.png){ width="500" }<figcaption>ArcGIS Desktop</figcaption>
+	</figure>
+8. It is likely that you will not be able to see the symbols on the map. Zoom into a city or region and they will appear. You will notice that there is a high density of similar symbols, but you now have data from a web service in your map window!
+	<figure markdown>
+   ![ArcGIS Desktop](../images/arcgis-desktop-6.png){ width="500" }<figcaption>ArcGIS Desktop</figcaption>
+	</figure>
 
-Drag and drop “QueryEnvFacs” into your map window. Add a basemap if you have not done so.
-
-In the Table of Contents, maximize “OneStop/QueryEnvFacs, find “Leaking Underground Storage Tanks” and tick the box next to it.
-
-It is likely that you will not be able to see the symbols on the map. Zoom into a city or region and they will appear.
-
-
-You will notice that there is a high density of similar symbols, but you now have data from a web service in your map window!
 
 
 
-### 
-Self-Guided Activity
+## Exercise
+
 Using the skills learned here, use the BTAA Geoportal to: 
 
 1. Find a web service of your choice

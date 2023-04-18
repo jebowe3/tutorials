@@ -20,10 +20,10 @@ theme:
 #   include_homepage_in_sidebar: false
 plugins:
   - search
-  - with-pdf:
-      output_path: tutorials.pdf
-  - pdf-export
-#       combined: false
+#   - with-pdf:
+#       output_path: tutorials.pdf
+#   - pdf-export
+# #       combined: false
 #   - git-revision-date-localized:
 #       enable_creation_date: false
   - glightbox:
@@ -44,25 +44,28 @@ extra_css:
   - stylesheets/extra.css
 
 markdown_extensions:
-  - abbr
-  - tables
-  - attr_list
-  - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.snippets:
-      auto_append:
-        - includes/abbreviations.md
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true 
-      
+      - abbr
+      - tables
+      - attr_list
+      - md_in_html
+      - pymdownx.emoji:
+            emoji_index: !!python/name:materialx.emoji.twemoji
+            emoji_generator: !!python/name:materialx.emoji.to_svg
+      - def_list
+      - pymdownx.tasklist:
+            custom_checkbox: true
+      - pymdownx.snippets:
+            auto_append:
+                  - includes/abbreviations.md
+      - admonition
+      - pymdownx.details
+      - pymdownx.superfences
+      - pymdownx.tabbed:
+            alternate_style: true 
+      - toc:
+            toc_depth: 3
+            permalink: true
+
 # nav:
 # - HOME: 'index.md'
 # -  Find & Use GIS Web Services: 'tutorial_web-services.md'
