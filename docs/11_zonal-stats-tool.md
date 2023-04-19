@@ -184,3 +184,226 @@ curl https://github.com/jebowe3/zonalstats_jupyternotebook/raw/main/IowaCity_Sha
 </figure>
 
 -   Now, test the modules by running the cell under "Import Modules"
+
+## Run the Python Code
+
+-   Now, follow through the steps in the Jupyter Notebook file, reading the descriptions and commented out code along the way for a better sense of what is happening
+
+-   A GUI input form will open, but it may be hidden behind your browser window. Follow the instructions, providing the City.shp and HRLC_2009_52 files you downloaded for the two browseable file inputs
+
+-   Here, City.shp is the Iowa City boundary, HRLC_2009_52 is the land cover of Johnson County. The land cover classes corresponding to tree canopy are 3 - 6, inclusive...
+
+<figure markdown>
+
+![Media Options](images/input-form.png)<figcaption>GUI Input Form</figcaption>
+
+</figure>
+
+## Explanation of the Code
+
+-   If you look inside the metadata xml file that comes with the land cover raster, you will see which classes correspond to which land covers. In this exercise, we are isolating tree coverage (values 3 to 6).
+
+<figure markdown>
+
+![Media Options](images/lc-classes.png)<figcaption>Land Cover Metadata</figcaption>
+
+</figure>
+
+-   Now, while we wait for the code to run, let's take a more detailed look at what it is doing...
+
+```python
+import os
+import tkinter as tk
+from tkinter.filedialog import askdirectory
+from tkinter.filedialog import askopenfilename
+import tkinter.messagebox
+from osgeo import gdal
+from osgeo import ogr, osr
+import numpy as np
+from numpy import zeros
+from numpy import logical_and
+import rasterio as rio
+from rasterstats import zonal_stats
+```
+
+The script above imports the packages that Python will need to make the tool run. The os module allows the script to interact with the operating system. Tkinter is a GUI package that allows you to build a dialog box / input form for the tool. The osgeo package offers open source libraries, like gdal and ogr, for working with geospatial data. The numpy library allows for mathematical computations, while rasterio and rasterstats allow you easy manipulation and analysis of raster data.
+
+Also, you should notice how these lines of code interact with the code below to link the defined inputs to the GUI widgets. Notice that you have some control over the placement and appearance of these elements within the GUI. You can also edit the text.
+
+```python
+##  GUI Widgets
+##  G-1. Shapefile Selection
+##  1-Label
+label_1 = tk.Label(self, text="Select the shapefile for your area of interest")
+label_1.grid(row=0, column=0, columnspan=2, padx=5, pady=5, sticky="W")
+
+##  1-Entry Box
+var_1 = tk.StringVar()
+entry_1 = tk.Entry(self, textvariable=var_1)
+entry_1.grid(row=0, column=2, padx=5, pady=5, ipadx=100, sticky="W")
+
+##  1-Button
+button_1 = tk.Button(self, text="Browse", command=BrowseFile_1)
+button_1.grid(row=0, column=3, padx=5, pady=5, sticky="E")
+```
+
+Let’s look at what happens after you click “OK”. The code below defines the form inputs with some more memorable names. It also ensures that the raster class inputs are parsed as numeric values, rather than as strings.
+
+```python
+##  Set input variables
+input_zone_polygon = var_1.get()
+input_value_raster = var_2.get()
+low_class_str = var_3.get()
+high_class_str = var_4.get()
+
+## Convert numeric strings to integers
+low_class_int = int(low_class_str)
+high_class_int = int(high_class_str)
+```
+
+A few lines below, you will see some code that defines the path to the raster file. Beneath this, is some code that isolates the file extension. Following this is a conditional test to isolate and define the driver, which we can use to create the new reclassified raster.
+
+```python
+## Get the directory path of the input raster
+ras_dir_path = os.path.dirname(input_value_raster)
+
+
+## Get the file extension of the raster file
+file_ext = os.path.splitext(input_value_raster)[1]
+
+if file_ext == '.tif':
+     drive = 'GTiff'
+elif file_ext == '.img':
+     drive = 'HFA'
+
+#Define the gdal driver with the drive variable from the conditional test
+driver = gdal.GetDriverByName(drive)
+```
+
+The code below takes the input raster file and reassigns a binary classification based on the range the user defines in the dialog box. If the classes are higher or lower than the input range, these will be redefined as 0. If the classes match the desired range, they will be redefined as 1. Then, the code creates a new file called “raster2” in the same directory as the input raster and sets the projection.
+
+```python
+file = gdal.Open(input_value_raster)
+band = file.GetRasterBand(1)
+
+
+# reclassification
+classification_values = [0,low_class_int,high_class_int + 1]
+classification_output_values = [0,1,0]
+
+block_sizes = band.GetBlockSize()
+x_block_size = block_sizes[0]
+y_block_size = block_sizes[1]
+
+xsize = band.XSize
+ysize = band.YSize
+
+max_value = band.GetMaximum()
+min_value = band.GetMinimum()
+
+if max_value == None or min_value == None:
+     stats = band.GetStatistics(0, 1)
+     max_value = stats[1]
+     min_value = stats[0]
+
+# create new file
+file2 = driver.Create( ras_dir_path + '/raster2' + file_ext, xsize , ysize , 1, gdal.GDT_Byte)
+
+# spatial ref system
+file2.SetGeoTransform(file.GetGeoTransform())
+file2.SetProjection(file.GetProjection())
+```
+
+The following block of code assigns the newly defined classes to each pixel in the “raster2” file by reading the input pixel values as an array and assigning new values based on a translation of classification breaks from the input “classification_values” [0, 3, 7] to the output “classification_output_values” [0, 1, 0]. Thus, any value less than 3 or greater than or equal to 7 is reclassified as 0, while anything greater than or equal to 3 and less than 7 is reclassified as 1.
+
+```python 
+print('Reassigning raster values...please wait...')
+for i in range(0, ysize, y_block_size):
+     if i + y_block_size < ysize:
+          rows = y_block_size
+     else:
+          rows = ysize - i
+     for j in range(0, xsize, x_block_size):
+          if j + x_block_size < xsize:
+               cols = x_block_size
+          else:
+               cols = xsize - j
+
+          data = band.ReadAsArray(j, i, cols, rows)
+          r = zeros((rows, cols), np.uint8)
+
+          for k in range(len(classification_values) - 1):
+               if classification_values[k] <= max_value and (classification_values[k + 1] > min_value ):
+                    r = r + classification_output_values[k] * logical_and(data >= classification_values[k], data < classification_values[k + 1])
+          if classification_values[k + 1] < max_value:
+               r = r + classification_output_values[k+1] * (data >= classification_values[k + 1])
+
+          file2.GetRasterBand(1).WriteArray(r,j,i)
+
+file2 = None 
+```
+
+Next, the script identifies the projection of the input shapefile and reprojects the “raster2” file to match the projection of the shapefile. The reprojected raster is then saved as “raster2_reproject” in the same directory as the input raster. This process is important because both the polygon and raster need to be in matching projections for the computation of zonal statistics.
+
+```python
+# Get the EPSG code of the input shapefile
+shp_driver = ogr.GetDriverByName('ESRI Shapefile')
+dataset = shp_driver.Open(input_zone_polygon)
+layer = dataset.GetLayer()
+spatialRef = layer.GetSpatialRef()
+shp_epsg = spatialRef.GetAttrValue("GEOGCS|AUTHORITY", 1)
+
+# Reproject the raster
+input_raster = gdal.Open(ras_dir_path + '/raster2' + file_ext)
+output_raster = ras_dir_path + '/raster2_reproject' + file_ext
+
+warp = gdal.Warp(output_raster,input_raster,dstSRS='EPSG:'+str(shp_epsg))
+warp = None
+```
+
+The following lines perform the zonal stats analysis and display the percent coverage of the input polygon by the selected raster classes, along with some supporting statistics in a message window that appears on the user’s screen after the analysis is complete.
+
+```python
+zs = zonal_stats(input_zone_polygon,output_raster,stats=['min', 'max', 'mean', 'count', 'sum'])
+
+## Hide the tkinter root box
+root = tk.Tk()
+root.withdraw()
+
+## Define each zonal stat
+min = [x['min'] for x in zs]
+max = [x['max'] for x in zs]
+mean = [x['mean'] for x in zs]
+count = [x['count'] for x in zs]
+sum = [x['sum'] for x in zs]
+
+## Build the messagebox content
+lines = ["AOI covered by selected raster classes: " + str(round(mean[0]*100,2))+"%", "minimum: " + str(min[0]), "maximum: " + str(max[0]), "count: " + str(count[0]), "sum: " + str(sum[0])]
+
+## Display the messagebox content in separate lines
+tk.messagebox.showinfo("Zonal Statistics Summary", "\n".join(lines))
+```
+
+<figure markdown>
+
+![Media Options](images/progress-output.png)<figcaption>Progress Notes</figcaption>
+
+</figure>
+
+After processing finishes, it will produce a text box providing information about how much of the polygon is covered by the selected range of classes.
+
+<figure markdown>
+
+![Media Options](images/zonal-stats-summary.png)<figcaption>Zonal Statistics Summary</figcaption>
+
+</figure>
+
+The tool will also output a reprojected raster file (raster2_reproject) that isolates your selected raster class range.
+
+In the screenshot, you can see the results, isolating the tree canopy classes from the input raster.
+
+<figure markdown>
+
+![Media Options](images/ic-tree-canopy.png)<figcaption>Iowa City Tree Canopy Raster</figcaption>
+
+</figure>
