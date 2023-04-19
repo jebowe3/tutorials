@@ -1,5 +1,5 @@
 ---
-title: Story Maps
+title: 10 Story Maps
 summary: This tutorial is designed as a brief introduction to the capabilities of ArcGIS Story Maps.
 authors:
     - Ryan Mattke
@@ -9,7 +9,6 @@ hide:
  - navigation
 ---
 
-# Story Maps
 
 *This tutorial is part of an educational series produced by members of the [Big Ten Academic Alliance Geospatial Information Network](https://geo.btaa.org).*
 
