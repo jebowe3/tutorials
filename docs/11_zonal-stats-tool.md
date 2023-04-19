@@ -130,3 +130,57 @@ curl https://github.com/jebowe3/zonalstats_jupyternotebook/raw/main/IowaCity_Sha
 </figure>
 
 ## Download Necessary Programs
+
+-   Download the latest edition of Anaconda-Navigator
+
+-   [MacOS](https://www.anaconda.com/products/individual#macos)
+
+-   [Windows](https://www.anaconda.com/products/individual#windows)
+
+-   Open Anaconda-Navigator and select "Environments"
+
+-   Click the "Create" button and name the new environment "giscience"
+
+-   Create this environment with a Python package
+
+<figure markdown>
+
+![Media Options](images/anaconda-nav.png)<figcaption>Create an Environment in Anaconda</figcaption>
+
+</figure>
+
+-   In Anaconda, return to "Home"
+
+-   Make sure the header reads "Applications on giscience"
+
+-   Find Jupyter Notebook and click "Install"
+
+-   After installation, click "Launch"
+
+<figure markdown>
+
+![Media Options](images/launch-jupyter.png)<figcaption>Launch Jupyter Notebook</figcaption>
+
+</figure>
+
+-   Inside Jupyter Notebook, navigate to "Desktop/zonal_statistics"
+
+-   Click on the "ZonalStatistics.ipynb" file
+
+<figure markdown>
+
+![Media Options](images/ipynb-file.png)<figcaption>Open ZonalStatistics.ipynb</figcaption>
+
+</figure>
+
+-   You have already downloaded the sample data, so skip the first cell
+
+-   Run the cell under "Install Required Packages" to ensure that you have all of the necessary Python modules to run the code
+
+<figure markdown>
+
+![Media Options](images/install-packages.png)<figcaption>Install Required Packages</figcaption>
+
+</figure>
+
+-   Now, test the modules by running the cell under "Import Modules"
