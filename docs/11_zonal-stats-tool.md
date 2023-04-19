@@ -143,6 +143,10 @@ curl https://github.com/jebowe3/zonalstats_jupyternotebook/raw/main/IowaCity_Sha
 
 -   Create this environment with a Python package
 
+??? Note
+     
+     We tested this tutorial with Python 3.8 and Python 3.7.16. Newer Python packages may not work with the code presented here.
+
 <figure markdown>
 
 ![Media Options](images/anaconda-nav.png)<figcaption>Create an Environment in Anaconda</figcaption>
