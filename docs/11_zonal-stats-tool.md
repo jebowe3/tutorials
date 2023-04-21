@@ -1,5 +1,5 @@
 ---
-title: 11 Build a Zonal Stats Tool with Python and Jupyter Notebook 
+title: Build a Zonal Stats Tool with Python and Jupyter Notebook 
 summary: This tutorial is meant to show users how to create an open-source GUI tool that accepts a raster file and a polygon shapefile as inputs and calculates the coverage of a given range of raster classes within the shapefile polygon.
 authors:
     - Jay Bowen
