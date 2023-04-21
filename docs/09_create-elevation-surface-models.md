@@ -1,5 +1,5 @@
 ---
-title: 9 Creating Elevation Surface Models Using LiDAR 
+title: Creating Elevation Surface Models Using LiDAR 
 summary: This tutorial provides the basic concept of LiDAR dataset and point cloud processing in ArcGIS Pro. Depending upon spatial extent and the density of LiDAR point cloud, processing can be computationally tedious. The LiDAR dataset that will be used in this tutorial is about 730mb and may take some good compute resources to perform 3D rendering of the dataset.
 authors:
     - Milan Budhathoki
