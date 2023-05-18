@@ -15,10 +15,11 @@ hide:
 
 	:material-arrow-right-box: Purpose: To help students evaluate geospatial information.
 
-	
 	:timer: Estimated time to complete: 30-40 minutes
 
 	:fontawesome-solid-user: Prepared by: Ryan Mattke, Map & Geospatial Information Librarian, University of Minnesota (matt0089@umn.edu). 
+
+  :date: Last updated: 2021-05-19
 
 	:material-creative-commons: License: Except where otherwise noted, content in this tutorial is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
 	

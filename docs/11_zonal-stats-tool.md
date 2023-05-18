@@ -14,6 +14,8 @@ hide:
 
     :fontawesome-solid-user: Prepared by: Jay Bowen, Geographic Information Specialist, University of Iowa (jay-bowen@uiowa.edu). 
 
+    :date: Last updated: 2021-08-16 
+
     :material-creative-commons: These slides and the accompanying activities are licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license.
 
 ------------------------------

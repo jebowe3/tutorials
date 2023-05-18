@@ -18,6 +18,8 @@ hide:
 
 	:fontawesome-solid-user: Prepared by: Jay Bowen, GIS Specialist, University of Iowa (jay-bowen@uiowa.edu). 
 
+   :date: Last updated: 2022-12-10
+
 	:material-creative-commons: License: Except where otherwise noted, content in this tutorial is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
 
 
